@@ -1,0 +1,261 @@
+/* Site footer — dark reference layout */
+.site-footer {
+  --footer-bg: #1a1a1a;
+  --footer-text: #9a9a9a;
+  --footer-text-bright: #e8e8e8;
+  --footer-border: rgba(255, 255, 255, 0.08);
+  --footer-max: 1200px;
+  position: relative;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 13px;
+  line-height: 1.55;
+  padding: 40px 0 32px;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--footer-text-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-book-anchor {
+  scroll-margin-top: var(--header-height, 72px);
+}
+
+.footer-inner {
+  width: min(var(--footer-max), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* 상단 푸터 내비 */
+.footer-top-nav {
+  padding-bottom: 20px;
+}
+
+.footer-top-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 28px;
+}
+
+.footer-top-list a {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  margin: 0 0 28px;
+  background: var(--footer-border);
+}
+
+/* 메인 그리드: 로고 | 정보 | 패밀리 */
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) 1fr auto;
+  gap: 28px 36px;
+  align-items: start;
+  padding-bottom: 28px;
+}
+
+.footer-logo {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--footer-text-bright);
+  line-height: 1.35;
+}
+
+.footer-logo span {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--footer-text);
+  margin-top: 4px;
+}
+
+.footer-info {
+  font-size: 12px;
+  color: var(--footer-text);
+}
+
+.footer-info p {
+  margin: 0 0 6px;
+}
+
+.footer-copy {
+  margin-top: 10px !important;
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* Family Site */
+.footer-family {
+  position: relative;
+  min-width: 200px;
+}
+
+.footer-family-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--footer-border);
+  border-radius: 2px;
+  background: #141414;
+  color: var(--footer-text-bright);
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.footer-family-toggle:hover,
+.footer-family-toggle:focus-visible {
+  border-color: rgba(255, 255, 255, 0.18);
+  outline: none;
+}
+
+.footer-family-icon {
+  flex: 0 0 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: #2a2a2a;
+  color: var(--footer-text-bright);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.footer-family[data-open="true"] .footer-family-icon {
+  transform: rotate(45deg);
+}
+
+.footer-family-list {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: calc(100% + 6px);
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: #222;
+  border: 1px solid var(--footer-border);
+  border-radius: 2px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  z-index: 20;
+}
+
+.footer-family-list[hidden] {
+  display: none;
+}
+
+.footer-family-list a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 12px;
+}
+
+.footer-family-list a:hover,
+.footer-family-list a:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* 하단 법적 링크 */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--footer-border);
+  font-size: 12px;
+}
+
+.footer-legal-sep {
+  color: rgba(255, 255, 255, 0.25);
+  user-select: none;
+}
+
+.footer-legal a.is-emphasis {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-legal a.is-emphasis:hover,
+.footer-legal a.is-emphasis:focus-visible {
+  color: #fff;
+}
+
+/* 맨 위로 */
+.footer-back-top {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  z-index: 40;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #d8d8d8;
+  color: #1a1a1a;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.footer-back-top:hover,
+.footer-back-top:focus-visible {
+  background: #eaeaea;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.footer-back-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-family {
+    min-width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-back-top {
+    transition: none;
+  }
+
+  .footer-back-top:hover,
+  .footer-back-top:focus-visible {
+    transform: none;
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY — Project Hotel</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/sub.css">
+</head>
+<body>
+    <header class="site-header" role="banner" data-nav-open="false">
+        <div class="mobile-overlay" data-nav-overlay aria-hidden="true"></div>
+        <div class="container">
+            <div class="header-inner">
+                <a class="brand" href="./index.html" aria-label="Project Hotel 홈으로">
+                    <span class="brand-title">Project Hotel</span>
+                    <span class="brand-sub">Hotel</span>
+                </a>
+                <nav class="primary-nav" id="primaryNav" aria-label="주요 메뉴">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="./sub01.html">ROOMS &amp; SUITES</a></li>
+                        <li><a class="nav-link" href="./sub02.html">DINING</a></li>
+                        <li><a class="nav-link" href="./sub03.html">FACILITIES</a></li>
+                        <li><a class="nav-link" href="./sub04.html">ACTIVITIES</a></li>
+                        <li><a class="nav-link" href="./sub05.html">OFFERS</a></li>
+                        <li><a class="nav-link" href="./sub06.html">GALLERY</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-ghost nav-toggle" type="button" aria-label="메뉴 열기" aria-controls="primaryNav" aria-expanded="false" data-nav-toggle>
+                        <span class="nav-toggle-inner" aria-hidden="true">
+                            <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+                        </span>
+                    </button>
+                    <a class="btn btn-primary" href="#book">BOOK</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="sub-visual" aria-labelledby="subVisualTitle">
+            <div class="sub-visual-inner">
+                <nav class="sub-visual-breadcrumb" aria-label="현재 위치">
+                    <ol>
+                        <li><a href="./index.html">홈</a></li>
+                        <li>GALLERY</li>
+                        <li>OVERVIEW</li>
+                    </ol>
+                </nav>
+                <h1 id="subVisualTitle" class="sub-visual-title">GALLERY</h1>
+                <button type="button" class="sub-visual-share" data-share aria-label="페이지 공유">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                        <circle cx="18" cy="5" r="2.25" /><circle cx="6" cy="12" r="2.25" /><circle cx="18" cy="19" r="2.25" />
+                        <path d="M7.7 10.7 15.3 6.3M7.7 13.3l7.6 4.4" stroke-linecap="round" />
+                    </svg>
+                    <span>SHARE</span>
+                </button>
+            </div>
+        </section>
+        <section class="main-content" aria-label="호텔 갤러리">
+            <div class="main-content-inner">
+                <ul class="gallery-grid">
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_01.png" width="800" height="600" alt="그랜드 로비 전경" /></a>
+                            <figcaption>그랜드 로비</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_02.png" width="800" height="600" alt="인피니티 풀" /></a>
+                            <figcaption>인피니티 풀</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_03.png" width="800" height="600" alt="디럭스 룸" /></a>
+                            <figcaption>더 드리밍 · 디럭스</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_04.png" width="800" height="600" alt="라운지 야경" /></a>
+                            <figcaption>라운지 앳 나이트</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_05.png" width="800" height="600" alt="스위트 거실" /></a>
+                            <figcaption>스위트 리빙</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_01.png" width="800" height="600" alt="파인 다이닝" /></a>
+                            <figcaption>파인 다이닝</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_02.png" width="800" height="600" alt="가든 테라스" /></a>
+                            <figcaption>가든 테라스</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="gallery-card">
+                            <a href="#"><img src="./img/bg02_03.png" width="800" height="600" alt="루프탑 선셋" /></a>
+                            <figcaption>루프탑 선셋</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div id="book" class="footer-book-anchor" aria-hidden="true"></div>
+        <div class="footer-inner">
+            <nav class="footer-top-nav" aria-label="푸터 안내 링크">
+                <ul class="footer-top-list">
+                    <li><a href="#">호텔소개</a></li>
+                    <li><a href="#">층별안내</a></li>
+                    <li><a href="#">호텔소식</a></li>
+                    <li><a href="#">공고게시판</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+            <hr class="footer-divider" />
+            <div class="footer-main">
+                <p class="footer-logo">Project Hotel<span>Hotel &amp; Resort</span></p>
+                <div class="footer-info">
+                    <p>프로젝트호텔 경주 | 대표 : 홍길동</p>
+                    <p>경상북도 경주시 엑스포로 45 (우38116) | TEL : 054-000-0000 | FAX : 054-000-0001</p>
+                    <p>사업자등록번호 : 000-00-00000 | 통신판매신고번호 : 2019-경북경주-0000</p>
+                    <p class="footer-copy">Copyright © PROJECT HOTEL. All Rights Reserved.</p>
+                </div>
+                <div class="footer-family" data-family-site>
+                    <button type="button" class="footer-family-toggle" data-family-toggle aria-expanded="false" aria-haspopup="true" aria-controls="footerFamilyList">
+                        Family Site<span class="footer-family-icon" aria-hidden="true">+</span>
+                    </button>
+                    <ul id="footerFamilyList" class="footer-family-list" data-family-list hidden>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">그룹 공식 사이트</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">제휴 리조트</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">멤버십 프로그램</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="footer-legal" aria-label="법적 고지">
+                <a href="#">이용약관</a><span class="footer-legal-sep" aria-hidden="true">|</span>
+                <a href="#" class="is-emphasis">개인정보처리방침</a><span class="footer-legal-sep" aria-hidden="true">|</span>
+                <a href="#">이메일무단수집거부</a><span class="footer-legal-sep" aria-hidden="true">|</span>
+                <a href="#">영상정보처리기기 운영관리방침</a><span class="footer-legal-sep" aria-hidden="true">|</span>
+                <a href="#">식자재관리</a>
+            </nav>
+        </div>
+        <button type="button" class="footer-back-top" data-back-top aria-label="맨 위로">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </footer>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/sections.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <script src="./js/sub.js" defer></script>
+</body>
+</html>
