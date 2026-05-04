@@ -1,0 +1,225 @@
+/* 예약 페이지 — 달력 : 사이드 = 3 : 1 */
+.reserve-page {
+  padding-bottom: 72px;
+}
+
+.reserve-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: clamp(20px, 3vw, 36px);
+  align-items: start;
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-top: 8px;
+}
+
+.reserve-calendar-wrap {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 20px 24px;
+  min-height: 380px;
+}
+
+.reserve-calendar-wrap--locked {
+  opacity: 0.45;
+  pointer-events: none;
+  user-select: none;
+}
+
+.reserve-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.reserve-calendar-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.reserve-cal-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.reserve-cal-nav button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: #374151;
+}
+
+.reserve-cal-nav button:hover,
+.reserve-cal-nav button:focus-visible {
+  background: #f9fafb;
+  outline: none;
+}
+
+.reserve-cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.reserve-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.reserve-cal-day {
+  aspect-ratio: 1;
+  max-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 13px;
+  color: #111827;
+  cursor: pointer;
+  padding: 0;
+}
+
+.reserve-cal-day:hover:not(:disabled),
+.reserve-cal-day:focus-visible:not(:disabled) {
+  background: #f3f4f6;
+  outline: none;
+}
+
+.reserve-cal-day:disabled {
+  color: #d1d5db;
+  cursor: default;
+}
+
+.reserve-cal-day--muted {
+  color: #cbd5e1;
+}
+
+.reserve-cal-day--in-range {
+  background: #e5e7eb;
+}
+
+.reserve-cal-day--checkin,
+.reserve-cal-day--checkout {
+  background: #111;
+  color: #fff;
+}
+
+.reserve-cal-hint {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.reserve-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.reserve-step {
+  padding: 16px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.reserve-step:last-of-type {
+  border-bottom: 0;
+}
+
+.reserve-step[hidden] {
+  display: none !important;
+}
+
+.reserve-step-label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.reserve-step select,
+.reserve-step .reserve-date-summary {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: #111827;
+}
+
+.reserve-step select:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.reserve-date-summary {
+  display: flex;
+  align-items: center;
+  line-height: 1.35;
+}
+
+.reserve-submit {
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.reserve-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.reserve-submit:not(:disabled):hover,
+.reserve-submit:not(:disabled):focus-visible {
+  filter: brightness(1.08);
+  outline: none;
+}
+
+@media (max-width: 960px) {
+  .reserve-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reserve-panel {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reserve-cal-day,
+  .reserve-submit {
+    transition: none;
+  }
+}

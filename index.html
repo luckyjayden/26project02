@@ -6,9 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
-    <header class="site-header" role="banner" data-nav-open="false">
+    <header class="site-header" role="banner" data-nav-open="false" data-aos="fade-down" data-aos-duration="700" data-aos-easing="ease-out-circ">
         <div class="mobile-overlay" data-nav-overlay aria-hidden="true"></div>
         <div class="container">
             <div class="header-inner">
@@ -103,7 +104,7 @@
     </main>
     <footer class="site-footer" role="contentinfo">
         <div id="book" class="footer-book-anchor" aria-hidden="true"></div>
-        <div class="footer-inner">
+        <div class="footer-inner" data-aos="fade-up" data-aos-easing="ease-out-circ">
             <nav class="footer-top-nav" aria-label="푸터 안내 링크">
                 <ul class="footer-top-list">
                     <li><a href="#">호텔소개</a></li>
@@ -168,7 +169,9 @@
         </button>
     </footer>
     <script src="./js/header.js" defer></script>
-    <script src="./js/sections.js" defer></script>
     <script src="./js/footer.js" defer></script>
+    <script src="./js/sections.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/aos-init.js" defer></script>
 </body>
 </html>
